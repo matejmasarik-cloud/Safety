@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { MATRIX_CONFIG, Finding, INSPECTOR_NAME, LOCATION_NAME } from './types';
 import InspectionModal from './components/InspectionModal';
 import { generatePDF } from './utils/pdfGenerator';
-import { PlusCircle, FileDown, Trash2, ClipboardCheck, Image as ImageIcon } from 'lucide-react';
+import { PlusCircle, FileDown, Trash2, ClipboardCheck, Image as ImageIcon, Github } from 'lucide-react';
 
 const App: React.FC = () => {
   const [activeModalCell, setActiveModalCell] = useState<string | null>(null);
@@ -63,6 +63,17 @@ const App: React.FC = () => {
                 <p className="font-medium capitalize">{today}</p>
                 <p className="text-xs text-gray-400">{findings.length} záznamov</p>
              </div>
+             
+             <a 
+               href="https://github.com/matejmasarik-cloud/Safety"
+               target="_blank" 
+               rel="noopener noreferrer"
+               className="p-2 text-gray-400 hover:text-gray-900 transition-colors"
+               title="GitHub Repository"
+             >
+               <Github className="w-5 h-5" />
+             </a>
+
              <button 
               onClick={handleExportPDF}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold shadow-sm transition-all ${
