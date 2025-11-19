@@ -1,0 +1,7 @@
+{
+  "name": "AUO 5S Inšpekcia",
+  "description": "Digitálny inšpekčný nástroj pre BOZP a 5S audit v AUO Trenčín.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
